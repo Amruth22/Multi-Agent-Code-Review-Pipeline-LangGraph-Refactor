@@ -1,0 +1,40 @@
+(genai-env) PS D:\GEN_AI_PRO\AGENTIC-AI\Multi-Agent> python main.py
+Smart Code Review Pipeline - Parallel Multi-Agent Mode
+============================================================
+1. Review GitHub PR (Parallel Multi-Agent)
+2. Review Local Files
+3. Run Demo
+0. Exit
+
+Select option (0-3): 1
+Enter GitHub repository URL: https://github.com/Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph/tree/fix-tests-parallel-state
+Enter PR number: 1
+2025-09-10 01:05:21 [INFO] main.pr: Reviewing PR #1 from Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph
+Reviewing PR #1 from Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph
+2025-09-10 01:05:21 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Repository: Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph
+2025-09-10 01:05:21 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Agents: PR Detector -> [Security, Quality, Coverage, AI Review, Documentation] -> Coordinator -> Decision -> Report
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 01:05:22 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-38E4CFA5
+2025-09-10 01:05:22 [INFO] github_service: Fetching PR details for Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph#1
+2025-09-10 01:05:23 [ERROR] github_service: Error fetching PR details: 404 Client Error: Not Found for url: https://api.github.com/repos/Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph/pulls/1
+2025-09-10 01:05:23 [ERROR] agent.pr_detector:  Pr_detector agent error: Failed to fetch PR details
+2025-09-10 01:05:23 [INFO] parallel_workflow: ======================================================================
+2025-09-10 01:05:23 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Review: REV-20250910-38E4CFA5
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Status: STARTED
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Agents Completed: pr_detector
+2025-09-10 01:05:23 [INFO] parallel_workflow:  No critical issues found
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Emails Sent: 0
+2025-09-10 01:05:23 [INFO] parallel_workflow:
+======================================================================
+2025-09-10 01:05:23 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Security Score: 0.00/10.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  PyLint Score: 0.00/10.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Test Coverage: 0.0%
+2025-09-10 01:05:23 [INFO] parallel_workflow:  AI Review Score: 0.00/1.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Documentation: 0.0%
+(genai-env) PS D:\GEN_AI_PRO\AGENTIC-AI\Multi-Agent> 

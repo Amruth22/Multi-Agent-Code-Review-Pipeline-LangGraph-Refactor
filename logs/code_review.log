@@ -1,0 +1,419 @@
+2025-09-09 21:54:48 [INFO] main.files: Reviewing 1 local Python files
+2025-09-09 21:54:48 [INFO] agent.security: SECURITY AGENT: REV-20250909-A3435138
+2025-09-09 21:54:48 [INFO] agent.quality: QUALITY AGENT: REV-20250909-A3435138
+2025-09-09 21:54:48 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-09 21:54:48 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-09 21:54:48 [INFO] agent.coverage: COVERAGE AGENT: REV-20250909-A3435138
+2025-09-09 21:54:48 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-09 21:54:48 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250909-A3435138
+2025-09-09 21:54:53 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-09 21:54:53 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-09 21:54:53 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-09 21:54:54 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 400 Bad Request"
+2025-09-09 21:54:54 [ERROR] gemini_service: Gemini error: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 21:54:54 [ERROR] gemini_service: Failed to review code: Failed to generate response from Gemini: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 21:54:54 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250909-A3435138
+2025-09-09 21:54:56 [INFO] main.files: ======================================================================
+2025-09-09 21:54:56 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-09 21:54:56 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 21:56:31 [INFO] main.files: Reviewing 1 local Python files
+2025-09-09 21:56:31 [INFO] agent.security: SECURITY AGENT: REV-20250909-E3B60CC3
+2025-09-09 21:56:31 [INFO] agent.security:  Security scanning demo_sample.py...
+2025-09-09 21:56:31 [INFO] agent.security:  Security analysis complete
+2025-09-09 21:56:31 [INFO] agent.quality: QUALITY AGENT: REV-20250909-E3B60CC3
+2025-09-09 21:56:31 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-09 21:56:31 [INFO] pylint_service:  PyLint analyzing demo_sample.py...
+2025-09-09 21:56:31 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-09 21:56:31 [INFO] agent.quality:  Quality analysis complete - 1 files analyzed
+2025-09-09 21:56:31 [INFO] agent.quality:  Quality analysis complete
+2025-09-09 21:56:31 [INFO] agent.coverage: COVERAGE AGENT: REV-20250909-E3B60CC3
+2025-09-09 21:56:31 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-09 21:56:31 [INFO] coverage_service:  Analyzing test coverage for demo_sample.py...
+2025-09-09 21:56:31 [INFO] agent.coverage:  Coverage analysis complete - 1 files analyzed
+2025-09-09 21:56:31 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-09 21:56:31 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250909-E3B60CC3
+2025-09-09 21:56:31 [INFO] agent.ai_review:  AI reviewing demo_sample.py...
+2025-09-09 21:56:36 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-09 21:56:36 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-09 21:56:36 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-09 21:56:38 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 400 Bad Request"
+2025-09-09 21:56:39 [ERROR] gemini_service: Gemini error: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 21:56:39 [ERROR] gemini_service: Failed to review code: Failed to generate response from Gemini: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 21:56:39 [INFO] agent.ai_review:  AI review complete - 1 files analyzed
+2025-09-09 21:56:39 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-09 21:56:39 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250909-E3B60CC3
+2025-09-09 21:56:39 [INFO] agent.documentation:  Analyzing documentation for demo_sample.py...
+2025-09-09 21:56:39 [INFO] agent.documentation:  Documentation analysis complete - 1 files analyzed
+2025-09-09 21:56:39 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-09 21:56:39 [INFO] parallel_workflow:  DECISION MAKER: REV-20250909-E3B60CC3
+2025-09-09 21:56:39 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-09 21:56:39 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 21:56:39 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250909-E3B60CC3
+2025-09-09 21:56:41 [ERROR] email_service:  Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-25a27fef05bsm2300135ad.58 - gsmtp')
+2025-09-09 21:56:41 [INFO] main.files: ======================================================================
+2025-09-09 21:56:41 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-09 21:56:41 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:00:19 [ERROR] main: Error: EOF when reading a line
+2025-09-09 22:00:39 [INFO] main.files: Reviewing 1 local Python files
+2025-09-09 22:00:39 [INFO] agent.security: SECURITY AGENT: REV-20250909-28B4D726
+2025-09-09 22:00:39 [INFO] agent.security:  Security scanning demo_sample.py...
+2025-09-09 22:00:39 [INFO] agent.security:  Security analysis complete
+2025-09-09 22:00:39 [INFO] agent.quality: QUALITY AGENT: REV-20250909-28B4D726
+2025-09-09 22:00:39 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-09 22:00:39 [INFO] pylint_service:  PyLint analyzing demo_sample.py...
+2025-09-09 22:00:39 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-09 22:00:39 [INFO] agent.quality:  Quality analysis complete - 1 files analyzed
+2025-09-09 22:00:39 [INFO] agent.quality:  Quality analysis complete
+2025-09-09 22:00:39 [INFO] agent.coverage: COVERAGE AGENT: REV-20250909-28B4D726
+2025-09-09 22:00:39 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-09 22:00:39 [INFO] coverage_service:  Analyzing test coverage for demo_sample.py...
+2025-09-09 22:00:39 [INFO] agent.coverage:  Coverage analysis complete - 1 files analyzed
+2025-09-09 22:00:39 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-09 22:00:39 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250909-28B4D726
+2025-09-09 22:00:39 [INFO] agent.ai_review:  AI reviewing demo_sample.py...
+2025-09-09 22:00:44 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-09 22:00:44 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-09 22:00:44 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-09 22:00:44 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 400 Bad Request"
+2025-09-09 22:00:44 [ERROR] gemini_service: Gemini error: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:00:44 [ERROR] gemini_service: Failed to review code: Failed to generate response from Gemini: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:00:44 [INFO] agent.ai_review:  AI review complete - 1 files analyzed
+2025-09-09 22:00:44 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-09 22:00:44 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250909-28B4D726
+2025-09-09 22:00:44 [INFO] agent.documentation:  Analyzing documentation for demo_sample.py...
+2025-09-09 22:00:44 [INFO] agent.documentation:  Documentation analysis complete - 1 files analyzed
+2025-09-09 22:00:44 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-09 22:00:44 [INFO] parallel_workflow:  DECISION MAKER: REV-20250909-28B4D726
+2025-09-09 22:00:44 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-09 22:00:44 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:00:44 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250909-28B4D726
+2025-09-09 22:00:47 [ERROR] email_service:  Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-25a2ab0f924sm2090855ad.115 - gsmtp')
+2025-09-09 22:00:47 [INFO] main.files: ======================================================================
+2025-09-09 22:00:47 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-09 22:00:47 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:02:00 [INFO] main.files: Reviewing 1 local Python files
+2025-09-09 22:02:00 [INFO] agent.security: SECURITY AGENT: REV-20250909-00AECE1D
+2025-09-09 22:02:00 [INFO] agent.security:  Security scanning demo_sample.py...
+2025-09-09 22:02:00 [INFO] agent.security:  Security analysis complete
+2025-09-09 22:02:00 [INFO] agent.quality: QUALITY AGENT: REV-20250909-00AECE1D
+2025-09-09 22:02:00 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-09 22:02:00 [INFO] pylint_service:  PyLint analyzing demo_sample.py...
+2025-09-09 22:02:00 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-09 22:02:00 [INFO] agent.quality:  Quality analysis complete - 1 files analyzed
+2025-09-09 22:02:00 [INFO] agent.quality:  Quality analysis complete
+2025-09-09 22:02:00 [INFO] agent.coverage: COVERAGE AGENT: REV-20250909-00AECE1D
+2025-09-09 22:02:00 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-09 22:02:00 [INFO] coverage_service:  Analyzing test coverage for demo_sample.py...
+2025-09-09 22:02:00 [INFO] agent.coverage:  Coverage analysis complete - 1 files analyzed
+2025-09-09 22:02:00 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-09 22:02:00 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250909-00AECE1D
+2025-09-09 22:02:00 [INFO] agent.ai_review:  AI reviewing demo_sample.py...
+2025-09-09 22:02:07 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-09 22:02:07 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-09 22:02:07 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-09 22:02:07 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 400 Bad Request"
+2025-09-09 22:02:07 [ERROR] gemini_service: Gemini error: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:02:07 [ERROR] gemini_service: Failed to review code: Failed to generate response from Gemini: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:02:07 [INFO] agent.ai_review:  AI review complete - 1 files analyzed
+2025-09-09 22:02:07 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-09 22:02:07 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250909-00AECE1D
+2025-09-09 22:02:07 [INFO] agent.documentation:  Analyzing documentation for demo_sample.py...
+2025-09-09 22:02:07 [INFO] agent.documentation:  Documentation analysis complete - 1 files analyzed
+2025-09-09 22:02:07 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-09 22:02:07 [INFO] parallel_workflow:  DECISION MAKER: REV-20250909-00AECE1D
+2025-09-09 22:02:07 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-09 22:02:07 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:02:07 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250909-00AECE1D
+2025-09-09 22:02:09 [ERROR] email_service:  Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-25a2a43a9bcsm2214255ad.89 - gsmtp')
+2025-09-09 22:02:09 [INFO] main.files: ======================================================================
+2025-09-09 22:02:09 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-09 22:02:09 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:11:53 [ERROR] main: Error: EOF when reading a line
+2025-09-09 22:15:42 [INFO] main.files: Reviewing 1 local Python files
+2025-09-09 22:15:42 [INFO] agent.security: SECURITY AGENT: REV-20250909-06BE886C
+2025-09-09 22:15:42 [INFO] agent.security:  Security scanning demo_sample.py...
+2025-09-09 22:15:42 [INFO] agent.security:  Security analysis complete
+2025-09-09 22:15:42 [INFO] agent.quality: QUALITY AGENT: REV-20250909-06BE886C
+2025-09-09 22:15:42 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-09 22:15:42 [INFO] pylint_service:  PyLint analyzing demo_sample.py...
+2025-09-09 22:15:42 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-09 22:15:42 [INFO] agent.quality:  Quality analysis complete - 1 files analyzed
+2025-09-09 22:15:42 [INFO] agent.quality:  Quality analysis complete
+2025-09-09 22:15:42 [INFO] agent.coverage: COVERAGE AGENT: REV-20250909-06BE886C
+2025-09-09 22:15:42 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-09 22:15:42 [INFO] coverage_service:  Analyzing test coverage for demo_sample.py...
+2025-09-09 22:15:42 [INFO] agent.coverage:  Coverage analysis complete - 1 files analyzed
+2025-09-09 22:15:42 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-09 22:15:42 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250909-06BE886C
+2025-09-09 22:15:42 [INFO] agent.ai_review:  AI reviewing demo_sample.py...
+2025-09-09 22:15:47 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-09 22:15:47 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-09 22:15:47 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-09 22:15:48 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 400 Bad Request"
+2025-09-09 22:15:48 [ERROR] gemini_service: Gemini error: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:15:48 [ERROR] gemini_service: Failed to review code: Failed to generate response from Gemini: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}
+2025-09-09 22:15:48 [INFO] agent.ai_review:  AI review complete - 1 files analyzed
+2025-09-09 22:15:48 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-09 22:15:48 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250909-06BE886C
+2025-09-09 22:15:48 [INFO] agent.documentation:  Analyzing documentation for demo_sample.py...
+2025-09-09 22:15:48 [INFO] agent.documentation:  Documentation analysis complete - 1 files analyzed
+2025-09-09 22:15:48 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-09 22:15:48 [INFO] parallel_workflow:  DECISION MAKER: REV-20250909-06BE886C
+2025-09-09 22:15:48 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-09 22:15:48 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-09 22:15:48 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250909-06BE886C
+2025-09-09 22:15:50 [ERROR] email_service:  Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-25a2ab0f924sm2353945ad.115 - gsmtp')
+2025-09-09 22:15:50 [INFO] main.files: ======================================================================
+2025-09-09 22:15:50 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-09 22:15:50 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-10 00:54:12 [INFO] main.pr: Reviewing PR #1 from ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage
+2025-09-10 00:54:12 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 00:54:12 [INFO] parallel_workflow:  Repository: ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage
+2025-09-10 00:54:12 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 00:54:12 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 00:54:12 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 00:54:12 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 00:54:12 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-9081EC17
+2025-09-10 00:54:12 [INFO] github_service: Fetching PR details for ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage#1
+2025-09-10 00:54:14 [ERROR] github_service: Error fetching PR details: 404 Client Error: Not Found for url: https://api.github.com/repos/ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage/pulls/1
+2025-09-10 00:54:14 [ERROR] agent.pr_detector:  Pr_detector agent error: Failed to fetch PR details
+2025-09-10 00:54:14 [INFO] parallel_workflow: ======================================================================
+2025-09-10 00:54:14 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Review: REV-20250910-9081EC17
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Status: STARTED
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Agents Completed: pr_detector
+2025-09-10 00:54:14 [INFO] parallel_workflow:  No critical issues found
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Emails Sent: 0
+2025-09-10 00:54:14 [INFO] parallel_workflow: 
+======================================================================
+2025-09-10 00:54:14 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Security Score: 0.00/10.0
+2025-09-10 00:54:14 [INFO] parallel_workflow:  PyLint Score: 0.00/10.0
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Test Coverage: 0.0%
+2025-09-10 00:54:14 [INFO] parallel_workflow:  AI Review Score: 0.00/1.0
+2025-09-10 00:54:14 [INFO] parallel_workflow:  Documentation: 0.0%
+2025-09-10 00:54:36 [ERROR] main: Error: EOF when reading a line
+2025-09-10 00:55:28 [ERROR] main: Error: EOF when reading a line
+2025-09-10 00:56:48 [INFO] main.pr: Reviewing PR #1 from ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage
+2025-09-10 00:56:48 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 00:56:48 [INFO] parallel_workflow:  Repository: ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage
+2025-09-10 00:56:48 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 00:56:48 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 00:56:48 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 00:56:48 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 00:56:52 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-3BCD1C96
+2025-09-10 00:56:52 [INFO] github_service: Fetching PR details for ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage#1
+2025-09-10 00:56:53 [ERROR] github_service: Error fetching PR details: 404 Client Error: Not Found for url: https://api.github.com/repos/ASWATHIMV99/W1D5S3-Local-model-serving_SQLitemetrics-storage/pulls/1
+2025-09-10 00:56:53 [ERROR] agent.pr_detector:  Pr_detector agent error: Failed to fetch PR details
+2025-09-10 00:56:53 [INFO] parallel_workflow: ======================================================================
+2025-09-10 00:56:53 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Review: REV-20250910-3BCD1C96
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Status: STARTED
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Agents Completed: pr_detector
+2025-09-10 00:56:53 [INFO] parallel_workflow:  No critical issues found
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Emails Sent: 0
+2025-09-10 00:56:53 [INFO] parallel_workflow: 
+======================================================================
+2025-09-10 00:56:53 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Security Score: 0.00/10.0
+2025-09-10 00:56:53 [INFO] parallel_workflow:  PyLint Score: 0.00/10.0
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Test Coverage: 0.0%
+2025-09-10 00:56:53 [INFO] parallel_workflow:  AI Review Score: 0.00/1.0
+2025-09-10 00:56:53 [INFO] parallel_workflow:  Documentation: 0.0%
+2025-09-10 01:01:43 [INFO] main.pr: Reviewing PR #1 from ASWATHIMV99/W1D6S3-On-Premises-Implementation-local-vision-language-deployment
+2025-09-10 01:01:43 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 01:01:43 [INFO] parallel_workflow:  Repository: ASWATHIMV99/W1D6S3-On-Premises-Implementation-local-vision-language-deployment
+2025-09-10 01:01:43 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 01:01:43 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 01:01:43 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 01:01:43 [INFO] parallel_workflow:  Agents: PR Detector -> [Security, Quality, Coverage, AI Review, Documentation] -> Coordinator -> Decision -> Report
+2025-09-10 01:01:44 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 01:01:44 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-CD002F2F
+2025-09-10 01:01:44 [INFO] github_service: Fetching PR details for ASWATHIMV99/W1D6S3-On-Premises-Implementation-local-vision-language-deployment#1
+2025-09-10 01:01:45 [ERROR] github_service: Error fetching PR details: 404 Client Error: Not Found for url: https://api.github.com/repos/ASWATHIMV99/W1D6S3-On-Premises-Implementation-local-vision-language-deployment/pulls/1
+2025-09-10 01:01:45 [ERROR] agent.pr_detector:  Pr_detector agent error: Failed to fetch PR details
+2025-09-10 01:01:45 [INFO] parallel_workflow: ======================================================================
+2025-09-10 01:01:45 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Review: REV-20250910-CD002F2F
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Status: STARTED
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Agents Completed: pr_detector
+2025-09-10 01:01:45 [INFO] parallel_workflow:  No critical issues found
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Emails Sent: 0
+2025-09-10 01:01:45 [INFO] parallel_workflow: 
+======================================================================
+2025-09-10 01:01:45 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Security Score: 0.00/10.0
+2025-09-10 01:01:45 [INFO] parallel_workflow:  PyLint Score: 0.00/10.0
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Test Coverage: 0.0%
+2025-09-10 01:01:45 [INFO] parallel_workflow:  AI Review Score: 0.00/1.0
+2025-09-10 01:01:45 [INFO] parallel_workflow:  Documentation: 0.0%
+2025-09-10 01:05:21 [INFO] main.pr: Reviewing PR #1 from Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph
+2025-09-10 01:05:21 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Repository: Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph
+2025-09-10 01:05:21 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Agents: PR Detector -> [Security, Quality, Coverage, AI Review, Documentation] -> Coordinator -> Decision -> Report
+2025-09-10 01:05:21 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 01:05:22 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-38E4CFA5
+2025-09-10 01:05:22 [INFO] github_service: Fetching PR details for Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph#1
+2025-09-10 01:05:23 [ERROR] github_service: Error fetching PR details: 404 Client Error: Not Found for url: https://api.github.com/repos/Amruth22/Multi-Agent-Code-Review-Pipeline-LangGraph/pulls/1
+2025-09-10 01:05:23 [ERROR] agent.pr_detector:  Pr_detector agent error: Failed to fetch PR details
+2025-09-10 01:05:23 [INFO] parallel_workflow: ======================================================================
+2025-09-10 01:05:23 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Review: REV-20250910-38E4CFA5
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Status: STARTED
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Agents Completed: pr_detector
+2025-09-10 01:05:23 [INFO] parallel_workflow:  No critical issues found
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Emails Sent: 0
+2025-09-10 01:05:23 [INFO] parallel_workflow: 
+======================================================================
+2025-09-10 01:05:23 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Security Score: 0.00/10.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  PyLint Score: 0.00/10.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Test Coverage: 0.0%
+2025-09-10 01:05:23 [INFO] parallel_workflow:  AI Review Score: 0.00/1.0
+2025-09-10 01:05:23 [INFO] parallel_workflow:  Documentation: 0.0%
+2025-09-10 01:08:50 [ERROR] main.files: No valid Python files to review
+2025-09-10 07:49:04 [ERROR] main: Error: EOF when reading a line
+2025-09-10 07:49:55 [INFO] main.files: Reviewing 1 local Python files
+2025-09-10 07:49:55 [INFO] agent.security: SECURITY AGENT: REV-20250910-C80B8DE7
+2025-09-10 07:49:55 [INFO] agent.security:  Security scanning demo_sample.py...
+2025-09-10 07:49:55 [INFO] agent.security:  Security analysis complete
+2025-09-10 07:49:55 [INFO] agent.quality: QUALITY AGENT: REV-20250910-C80B8DE7
+2025-09-10 07:49:55 [WARNING] pylint_service: PyLint is not installed or not working properly
+2025-09-10 07:49:55 [INFO] pylint_service:  PyLint analyzing demo_sample.py...
+2025-09-10 07:49:55 [ERROR] pylint_service: Error running PyLint: [WinError 2] The system cannot find the file specified
+2025-09-10 07:49:55 [INFO] agent.quality:  Quality analysis complete - 1 files analyzed
+2025-09-10 07:49:55 [INFO] agent.quality:  Quality analysis complete
+2025-09-10 07:49:55 [INFO] agent.coverage: COVERAGE AGENT: REV-20250910-C80B8DE7
+2025-09-10 07:49:55 [WARNING] coverage_service: pytest is not installed or not working properly
+2025-09-10 07:49:55 [INFO] coverage_service:  Analyzing test coverage for demo_sample.py...
+2025-09-10 07:49:55 [INFO] agent.coverage:  Coverage analysis complete - 1 files analyzed
+2025-09-10 07:49:55 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-10 07:49:55 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250910-C80B8DE7
+2025-09-10 07:49:55 [INFO] agent.ai_review:  AI reviewing demo_sample.py...
+2025-09-10 07:50:00 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-10 07:50:00 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 07:50:00 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 07:50:02 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 07:50:05 [INFO] agent.ai_review:  AI review complete - 1 files analyzed
+2025-09-10 07:50:05 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-10 07:50:05 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250910-C80B8DE7
+2025-09-10 07:50:05 [INFO] agent.documentation:  Analyzing documentation for demo_sample.py...
+2025-09-10 07:50:05 [INFO] agent.documentation:  Documentation analysis complete - 1 files analyzed
+2025-09-10 07:50:05 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-10 07:50:05 [INFO] parallel_workflow:  DECISION MAKER: REV-20250910-C80B8DE7
+2025-09-10 07:50:05 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-10 07:50:05 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-10 07:50:05 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250910-C80B8DE7
+2025-09-10 07:50:11 [INFO] email_service:  Email sent:  CRITICAL ISSUES: PR #0 - Local Files Review
+2025-09-10 07:50:11 [INFO] main.files: ======================================================================
+2025-09-10 07:50:11 [INFO] main.files: ANALYSIS COMPLETED
+2025-09-10 07:50:11 [INFO] main.files: Critical Issues: Security issues detected: Score 6.0/8.0 or 2 high severity vulnerabilities
+2025-09-10 07:50:32 [ERROR] main: Error: EOF when reading a line
+2025-09-10 08:09:55 [INFO] main.pr: Reviewing PR #1 from Amruth22/lung-disease-prediction-yolov10
+2025-09-10 08:09:55 [INFO] parallel_workflow:  STARTING PARALLEL MULTI-AGENT CODE REVIEW WORKFLOW
+2025-09-10 08:09:55 [INFO] parallel_workflow:  Repository: Amruth22/lung-disease-prediction-yolov10
+2025-09-10 08:09:55 [INFO] parallel_workflow:  PR Number: 1
+2025-09-10 08:09:55 [INFO] parallel_workflow:  Building Parallel Multi-Agent Workflow...
+2025-09-10 08:09:55 [INFO] parallel_workflow:  Parallel Multi-Agent Workflow Created
+2025-09-10 08:09:55 [INFO] parallel_workflow:  Agents: PR Detector -> [Security, Quality, Coverage, AI Review, Documentation] -> Coordinator -> Decision -> Report
+2025-09-10 08:09:55 [INFO] parallel_workflow:  Executing PARALLEL MULTI-AGENT workflow...
+2025-09-10 08:10:00 [INFO] agent.pr_detector: PR_DETECTOR AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:00 [INFO] github_service: Fetching PR details for Amruth22/lung-disease-prediction-yolov10#1
+2025-09-10 08:10:02 [INFO] github_service: Fetching PR files for Amruth22/lung-disease-prediction-yolov10#1
+2025-09-10 08:10:03 [INFO] agent.pr_detector:  Fetching files from branch: demo-flawed-code
+2025-09-10 08:10:03 [INFO] github_service: Fetching file content: scripts/download_dataset.py (ref: demo-flawed-code)
+2025-09-10 08:10:05 [INFO] github_service: Fetching file content: src/evaluate.py (ref: demo-flawed-code)
+2025-09-10 08:10:06 [INFO] github_service: Fetching file content: src/infer.py (ref: demo-flawed-code)
+2025-09-10 08:10:07 [INFO] github_service: Fetching file content: src/train.py (ref: demo-flawed-code)
+2025-09-10 08:10:09 [INFO] github_service: Fetching file content: src/utils.py (ref: demo-flawed-code)
+2025-09-10 08:10:15 [INFO] email_service:  Email sent:  Code Review Started: PR #1 -  Updated Code Review Pipeline Testing
+2025-09-10 08:10:15 [INFO] agent.pr_detector:  PR detected: 5 Python files to review
+2025-09-10 08:10:15 [INFO] agent.pr_detector:  Launching parallel agents: Security, Quality, Coverage, AI Review
+2025-09-10 08:10:15 [INFO] agent.pr_detector:  Pr_detector analysis complete
+2025-09-10 08:10:15 [INFO] agent.ai_review: AI_REVIEW AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:15 [INFO] agent.ai_review:  AI reviewing scripts/download_dataset.py...
+2025-09-10 08:10:15 [INFO] agent.coverage: COVERAGE AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:15 [INFO] agent.documentation: DOCUMENTATION AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:15 [INFO] agent.documentation:  Analyzing documentation for scripts/download_dataset.py...
+2025-09-10 08:10:15 [INFO] agent.documentation:  Analyzing documentation for src/evaluate.py...
+2025-09-10 08:10:15 [INFO] agent.quality: QUALITY AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:15 [INFO] agent.documentation:  Analyzing documentation for src/infer.py...
+2025-09-10 08:10:15 [INFO] agent.security: SECURITY AGENT: REV-20250910-CA615BDB
+2025-09-10 08:10:15 [INFO] agent.documentation:  Analyzing documentation for src/train.py...
+2025-09-10 08:10:15 [INFO] agent.security:  Security scanning scripts/download_dataset.py...
+2025-09-10 08:10:15 [INFO] agent.documentation:  Analyzing documentation for src/utils.py...
+2025-09-10 08:10:15 [INFO] agent.security:  Security scanning src/evaluate.py...
+2025-09-10 08:10:15 [INFO] agent.security:  Security scanning src/infer.py...
+2025-09-10 08:10:15 [INFO] agent.documentation:  Documentation analysis complete - 5 files analyzed
+2025-09-10 08:10:15 [INFO] agent.security:  Security scanning src/train.py...
+2025-09-10 08:10:15 [INFO] agent.documentation:  Documentation analysis complete
+2025-09-10 08:10:15 [INFO] agent.security:  Security scanning src/utils.py...
+2025-09-10 08:10:15 [INFO] agent.security:  Security analysis complete
+2025-09-10 08:10:26 [INFO] pylint_service:  PyLint analyzing scripts/download_dataset.py...
+2025-09-10 08:10:31 [INFO] coverage_service:  Analyzing test coverage for scripts/download_dataset.py...
+2025-09-10 08:10:31 [INFO] coverage_service:  Analyzing test coverage for src/evaluate.py...
+2025-09-10 08:10:31 [INFO] coverage_service:  Analyzing test coverage for src/infer.py...
+2025-09-10 08:10:31 [INFO] coverage_service:  Analyzing test coverage for src/train.py...
+2025-09-10 08:10:31 [INFO] coverage_service:  Analyzing test coverage for src/utils.py...
+2025-09-10 08:10:32 [INFO] agent.coverage:  Coverage analysis complete - 5 files analyzed
+2025-09-10 08:10:32 [INFO] agent.coverage:  Coverage analysis complete
+2025-09-10 08:10:33 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-10 08:10:33 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:10:33 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:10:35 [INFO] pylint_service:  PyLint analyzing src/evaluate.py...
+2025-09-10 08:10:35 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:10:39 [INFO] agent.ai_review:  AI reviewing src/evaluate.py...
+2025-09-10 08:10:39 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:10:39 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:10:40 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:10:43 [INFO] agent.ai_review:  AI reviewing src/infer.py...
+2025-09-10 08:10:43 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:10:43 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:10:44 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:10:45 [INFO] pylint_service:  PyLint analyzing src/infer.py...
+2025-09-10 08:10:48 [INFO] agent.ai_review:  AI reviewing src/train.py...
+2025-09-10 08:10:48 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:10:48 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:10:48 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:10:49 [INFO] pylint_service:  PyLint analyzing src/train.py...
+2025-09-10 08:10:51 [INFO] agent.ai_review:  AI reviewing src/utils.py...
+2025-09-10 08:10:51 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:10:51 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:10:52 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:10:53 [INFO] pylint_service:  PyLint analyzing src/utils.py...
+2025-09-10 08:10:54 [INFO] agent.ai_review:  AI review complete - 5 files analyzed
+2025-09-10 08:10:54 [INFO] agent.ai_review:  Ai_review analysis complete
+2025-09-10 08:11:01 [INFO] agent.quality:  Quality analysis complete - 5 files analyzed
+2025-09-10 08:11:01 [INFO] agent.quality:  Quality analysis complete
+2025-09-10 08:11:01 [INFO] agent.agent_coordinator: AGENT_COORDINATOR AGENT: REV-20250910-CA615BDB
+2025-09-10 08:11:01 [INFO] agent.agent_coordinator:  Agents completed: ['pr_detector', 'ai_review', 'coverage', 'documentation', 'quality', 'security']
+2025-09-10 08:11:01 [INFO] agent.agent_coordinator:  All agents completed, aggregating results...
+2025-09-10 08:11:03 [INFO] gemini_service: Initialized Gemini client with model: gemini-2.0-flash
+2025-09-10 08:11:03 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2025-09-10 08:11:03 [INFO] google_genai.models: AFC remote call 1 is done.
+2025-09-10 08:11:05 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse "HTTP/1.1 200 OK"
+2025-09-10 08:11:07 [INFO] agent.agent_coordinator:  Agent coordination complete - All results aggregated
+2025-09-10 08:11:07 [INFO] agent.agent_coordinator:  Agent_coordinator analysis complete
+2025-09-10 08:11:07 [INFO] parallel_workflow:  DECISION MAKER: REV-20250910-CA615BDB
+2025-09-10 08:11:07 [INFO] parallel_workflow:  Decision made: CRITICAL_ESCALATION
+2025-09-10 08:11:07 [INFO] parallel_workflow:  Critical issues: Security issues detected: Score 3.9/8.0 or 12 high severity vulnerabilities
+2025-09-10 08:11:07 [INFO] parallel_workflow:  REPORT GENERATOR: REV-20250910-CA615BDB
+2025-09-10 08:11:11 [INFO] email_service:  Email sent:  CRITICAL ISSUES: PR #1 -  Updated Code Review Pipeline Testing
+2025-09-10 08:11:11 [INFO] parallel_workflow: ======================================================================
+2025-09-10 08:11:11 [INFO] parallel_workflow:  WORKFLOW COMPLETED
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Review: REV-20250910-CA615BDB
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Status: REPORT_COMPLETE
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Agents Completed: documentation, pr_detector, agent_coordinator, security, quality, ai_review, coverage
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Critical Issues: Security issues detected: Score 3.9/8.0 or 12 high severity vulnerabilities
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Emails Sent: 2
+2025-09-10 08:11:11 [INFO] parallel_workflow: 
+======================================================================
+2025-09-10 08:11:11 [INFO] parallel_workflow:  QUALITY METRICS SUMMARY
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Security Score: 3.90/10.0
+2025-09-10 08:11:11 [INFO] parallel_workflow:  PyLint Score: 5.27/10.0
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Test Coverage: 48.5%
+2025-09-10 08:11:11 [INFO] parallel_workflow:  AI Review Score: 0.14/1.0
+2025-09-10 08:11:11 [INFO] parallel_workflow:  Documentation: 48.1%
