@@ -277,18 +277,246 @@ The system provides detailed console output showing:
 - **Email Notifications**: Count of emails sent during the process
 
 ### Email Report Sample:
-The system sends comprehensive email reports including:
-- **Subject Line**: Clear indication of review status and decision
-- **Decision Summary**: AUTO-APPROVED, HUMAN REVIEW, or CRITICAL ESCALATION
-- **Quality Metrics**: Detailed scores for all analysis dimensions
-- **Key Findings**: Summary of important discoveries and issues
-- **Approval Criteria**: Specific thresholds met or failed
-- **Action Items**: Next steps and recommendations
-- **Professional Formatting**: Business-appropriate tone and structure
-
 ## Testing and Validation
 
 ### Test Suite Execution:
+- **Comprehensive Test Suite**: python tests.py
+- **Verbose Output**: python -m pytest tests.py -v
+- **Specific Test Categories**: Individual test methods for focused testing
+- **Ignore Warnings**: python3 -W ignore -m pytest tests.py -v
+
+### Test Cases to be Passed
+
+The comprehensive test suite includes the following test methods that must pass:
+
+#### **1. test_configuration()**
+**Purpose**: Validate configuration management system functionality
+**Test Coverage**:
+- Configuration instance creation and singleton pattern
+- Environment variable loading and default value handling
+- GitHub token, Gemini API key, and email credential validation
+- Quality threshold configuration (PYLINT_THRESHOLD, COVERAGE_THRESHOLD)
+- Type conversion for numeric configuration values
+- Missing configuration key handling with defaults
+
+**Expected Results**:
+- Config manager should not be None
+- Default values should be returned for missing keys
+- All thresholds should be >= 0.0
+- Configuration validation should work properly
+
+#### **2. test_state_management()**
+**Purpose**: Validate state management and workflow state transitions
+**Test Coverage**:
+- Initial state creation with proper structure
+- Review ID generation with correct format (REV-YYYYMMDD-XXXXX)
+- Repository owner, name, and PR number assignment
+- Timestamp format validation
+- State field presence and data types
+
+**Expected Results**:
+- State should not be None
+- Repo owner, name, and PR number should be set correctly
+- Review ID should start with "REV-"
+- Timestamp should be present and properly formatted
+
+#### **3. test_security_analysis()**
+**Purpose**: Validate security vulnerability detection functionality
+**Test Coverage**:
+- Direct security analyzer execution on sample code
+- Vulnerability pattern detection (hardcoded secrets, eval usage, SQL injection)
+- Security scoring calculation (0-10 scale)
+- Severity classification (HIGH, MEDIUM, LOW)
+- Security agent execution with proper state handling
+- Result structure validation
+
+**Expected Results**:
+- Security analysis results should not be None
+- Should detect vulnerabilities in sample code with hardcoded API key and eval() usage
+- Results should contain vulnerabilities list and security score
+- Security agent should return properly structured security_results
+
+#### **4. test_documentation_analysis()**
+**Purpose**: Validate documentation quality assessment functionality
+**Test Coverage**:
+- Direct documentation analyzer execution
+- Docstring coverage calculation for functions and classes
+- Missing documentation identification
+- Documentation quality scoring
+- Documentation agent execution with state management
+
+**Expected Results**:
+- Documentation analysis results should not be None
+- Should contain documentation_coverage percentage
+- Documentation agent should return properly structured documentation_results
+- Should identify missing docstrings in sample code
+
+#### **5. test_coverage_analysis()**
+**Purpose**: Validate test coverage analysis functionality
+**Test Coverage**:
+- Coverage service integration and execution
+- Test coverage percentage calculation
+- Missing test coverage identification
+- Coverage agent execution with proper result formatting
+- Graceful handling of missing test files
+
+**Expected Results**:
+- Coverage analysis results should not be None
+- Should have at least one result for analyzed file
+- Results should contain coverage_percent field
+- Coverage agent should return properly structured coverage_results
+
+#### **6. test_quality_analysis()**
+**Purpose**: Validate PyLint code quality analysis functionality
+**Test Coverage**:
+- PyLint service integration and execution
+- Code quality score calculation (0-10 scale)
+- Issue categorization and reporting
+- Quality agent execution with state management
+- Graceful degradation when PyLint is unavailable
+
+**Expected Results**:
+- PyLint analysis result should not be None
+- Result should contain score field
+- Quality agent should return properly structured pylint_results
+- Should handle missing PyLint installation gracefully
+
+#### **7. test_workflow_structure()**
+**Purpose**: Validate LangGraph workflow orchestration structure
+**Test Coverage**:
+- Parallel multi-agent workflow creation
+- LangGraph StateGraph compilation
+- Workflow node and edge configuration
+- Decision maker, report generator, and error handler methods
+- Workflow method availability and structure
+
+**Expected Results**:
+- Compiled workflow should not be None
+- Workflow should have required methods (decision_maker_node, report_generator_node, error_handler_node)
+- LangGraph integration should work properly
+
+#### **8. test_github_service()**
+**Purpose**: Validate GitHub API integration functionality
+**Test Coverage**:
+- GitHub client initialization with token authentication
+- Repository details retrieval from public repositories
+- API rate limiting and error handling
+- GitHub service integration with real API calls
+
+**Expected Results**:
+- GitHub client should not be None
+- Should successfully retrieve public repository details (Microsoft/TypeScript)
+- API integration should work with valid GitHub token
+- **Note**: Test skipped if no valid GitHub token is configured
+
+#### **9. test_gemini_service()**
+**Purpose**: Validate Gemini AI service integration functionality
+**Test Coverage**:
+- Gemini service initialization with API key
+- AI review agent execution with real AI calls
+- Context-aware analysis with sample code
+- AI response parsing and result formatting
+
+**Expected Results**:
+- Gemini service should not be None
+- AI review agent should return properly structured ai_reviews
+- Should handle AI API calls and response processing
+- **Note**: Test skipped if no valid Gemini API key is configured
+
+#### **10. test_full_pipeline()**
+**Purpose**: Validate end-to-end pipeline execution
+**Test Coverage**:
+- Complete workflow execution with all 5 agents
+- Agent coordination and result aggregation
+- Decision making with quality thresholds
+- State management throughout the pipeline
+- Integration between all system components
+
+**Test Process**:
+1. Create initial state with sample code
+2. Execute all 5 agents (Security, Quality, Coverage, AI Review, Documentation)
+3. Combine results from all agents
+4. Run decision maker with quality threshold evaluation
+5. Validate final decision and metrics
+
+**Expected Results**:
+- All agents should execute successfully
+- Decision result should not be None
+- Decision should contain proper decision field
+- Pipeline should handle complete workflow execution
+- Final metrics should be calculated and available
+
+#### **11. test_file_validation()**
+**Purpose**: Validate file path validation and Python file filtering
+**Test Coverage**:
+- Existing Python file validation
+- Non-existent file handling
+- Non-Python file filtering (.txt, .md files)
+- File path sanitization and validation
+
+**Expected Results**:
+- Should validate existing Python files correctly
+- Should reject non-existent files
+- Should filter out non-Python files
+- File validation should return appropriate file lists
+
+### Test Environment Setup
+
+**Sample Test Data**:
+The test suite uses a comprehensive sample Python code that includes:
+- **Security Vulnerabilities**: Hardcoded API key, eval() usage for code injection
+- **Documentation Issues**: Missing docstrings for some functions
+- **Quality Issues**: Code style and complexity issues detectable by PyLint
+- **Coverage Gaps**: Functions without corresponding test coverage
+
+**Test Configuration Requirements**:
+- **Optional GitHub Token**: For GitHub API integration tests
+- **Optional Gemini API Key**: For AI service integration tests
+- **Temporary File Handling**: Automatic cleanup of test files
+- **Error Handling**: Graceful test failure with informative messages
+
+### Test Execution Commands
+
+**Run All Tests**:
+- Standard execution: `python tests.py`
+- Pytest with verbose output: `python -m pytest tests.py -v`
+- Ignore warnings: `python3 -W ignore -m pytest tests.py -v`
+
+**Run Specific Tests**:
+- Configuration tests: `python tests.py TestSmartCodeReview.test_configuration`
+- Security analysis: `python tests.py TestSmartCodeReview.test_security_analysis`
+- Full pipeline: `python tests.py TestSmartCodeReview.test_full_pipeline`
+
+### Expected Test Results
+
+**Successful Test Run Output**:
+- All 11 test methods should pass
+- Tests should complete within reasonable time (< 2 minutes)
+- Proper cleanup of temporary files
+- Clear indication of skipped tests (GitHub/Gemini API tests without credentials)
+
+**Test Failure Handling**:
+- Clear error messages for configuration issues
+- Graceful handling of missing API credentials
+- Detailed failure information for debugging
+- Proper test isolation (failures don't affect other tests)
+
+### Important Notes for Testing
+
+**API Key Requirements**:
+- **GitHub Token**: Required for test_github_service() - test will be skipped if not available
+- **Gemini API Key**: Required for test_gemini_service() and AI components - test will be skipped if not available
+- **Free Tier Limits**: Ensure Gemini API free tier is not exhausted before running tests
+
+**Test Directory**:
+- Tests must be run from the project root directory
+- Ensure all dependencies are installed via `pip install -r requirements.txt`
+- Verify Python path includes the smart_code_review package
+
+**Performance Expectations**:
+- Individual tests should complete within 10-30 seconds
+- Full test suite should complete within 2-3 minutes
+- Network-dependent tests (GitHub, Gemini) may take longer
 - **Comprehensive Test Suite**: python tests.py
 - **Verbose Output**: python -m pytest tests.py -v
 - **Specific Test Categories**: Individual test methods for focused testing
